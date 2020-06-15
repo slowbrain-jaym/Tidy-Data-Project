@@ -15,15 +15,15 @@ subject_train<-read.table(paste(dataset_dir,"/train/subject_train.txt",sep=""))
 actlabels<-read.table(paste(dataset_dir,"/activity_labels.txt",sep=""))
 features<-read.table(paste(dataset_dir,"/features.txt",sep=""))
 
-names(actlabels)<-c("actID","activity")
+names(actlabels)<-c("actid","activity")
 
 ## Give X data descriptive column labels
 names(X_test)<-features[[2]]
 names(X_train)<-features[[2]]
 
 ## Give y data a description column label
-names(y_test)<-"actID"
-names(y_train)<-"actID"
+names(y_test)<-"actid"
+names(y_train)<-"actid"
 
 ## Give subject data descriptive column label
 names(subject_test)<-"subject"
@@ -35,7 +35,7 @@ train_set<-bind_cols(subject_train,y_train, X_train)
 
 ## Join the test and training sets
 alldata<-bind_rows(train_set,test_set)
-alldata<-merge(actlabels,alldata,by="actID")
+alldata<-merge(actlabels,alldata,by="actid")
 
 ## Find columns that are mean or standard deviation measurements, as well as
 ## the participant and activity labels
@@ -52,6 +52,6 @@ summaries<- alldata %>%
   summarise_all(mean) %>%
   select(-actid)
 
-## wite the two created datasets to csv files
+## write the two created datasets to csv files
 write.csv(means_devs, "means_devs.csv")
 write.csv(summaries, "summaries.csv")
