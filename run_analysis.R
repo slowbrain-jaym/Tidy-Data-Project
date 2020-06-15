@@ -47,10 +47,9 @@ means_devs<-alldata[,cols]
 
 ## create summary dataset including the mean of each subject and activity
 ## combination
-summaries<- alldata %>%
+summaries<- means_devs %>%
   group_by(subject, activity) %>%
-  summarise_all(mean) %>%
-  select(-actid)
+  summarise_all(mean)
 
 ## write the two created datasets to csv files
 write.csv(means_devs, "means_devs.csv")

@@ -17,7 +17,7 @@ produced and saved to .csv files:
 
   1. All the mean and standard deviation variables from the original dataset.
      (means_devs.csv)
-  2. The mean values for every variable for each combination of subject and 
+  2. The mean values in means_devs for each combination of subject and 
      activity. 
      (summaries.csv)
      
