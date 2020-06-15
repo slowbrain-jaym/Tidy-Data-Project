@@ -24,4 +24,7 @@ produced and saved to .csv files:
 These resulting csvs are included in the repository
 
 Descriptions of the variables are included in the features_info.txt copied from
-the original UCI folder.
+the original UCI folder. Note that variables are not by default renamed by the
+script in order to allow easy checking and comparison with the raw data. If 
+desired however, line 46 in the run_analysis.R script can be uncommented and
+will remove upper case and brackets from the variable names.
