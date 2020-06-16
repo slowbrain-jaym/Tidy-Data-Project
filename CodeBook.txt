@@ -1,0 +1,29 @@
+Variables are named using the following convention:
+
+1. Prefix:
+  "t" for time domain varaibles
+  "f" for frequency domain variables obtained from a FFT operation on the time 
+      domain variable
+
+2. Variables Name:
+  Accelerometer data is processed into two seperate measurements:
+  "BodyAcc" for acceleration of the body of the smart phone
+  "GravityAcc" for the acceleration due to gravity
+  
+  "Gyroscope" gives position data from the smartphone's Gyroscope
+  
+3. Further Processing:
+  Un processed varaibles are given by the convention above.
+  "Jerk" indicates the variable has been differentiated w.r.t. time
+  
+4. Dimension:
+  "X"/"Y"/"Z" indicates the direction of the variable
+  "Mag" indicates the magnitude of the variable (euclidean norm of the xzy data)
+
+5. Statistic:
+  "mean()" mean of the variable of the experiment
+  "std()" standard deviation of the variable over the experiment
+
+so for example: tBodyAccJerkMag-mean() indicates the mean magnitude of the 
+accelerometer reading in the time domain, differentiated w.r.t. time.
+
