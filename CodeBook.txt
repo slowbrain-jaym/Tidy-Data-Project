@@ -1,4 +1,5 @@
 Variables are named using the following convention:
+Note that variable names have not been editted from the original study to allow easier comparison to the original data and between datasets.
 
 1. Prefix:
   "t" for time domain varaibles
